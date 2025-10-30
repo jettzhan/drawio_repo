@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 Edg/141.0.0.0" version="28.2.8">
   <diagram name="第 1 页" id="APCh7BjeOOtAGaZGDcYt">
-    <mxGraphModel dx="1516" dy="1593" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1805" dy="1690" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -68,7 +68,7 @@
           <mxGeometry x="1350" y="270" width="150" height="95" as="geometry" />
         </mxCell>
         <mxCell id="LNKvwu89KQF0c-JhORbD-12" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;性能不够&lt;/h1&gt;&lt;div&gt;1、event_storage 数据堆积很多。&lt;/div&gt;&lt;p&gt;2、发现__sending_queue 其实没啥数据。说明__send_thread。性能不够&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="730" y="-220" width="250" height="220" as="geometry" />
+          <mxGeometry x="707.5" y="-110" width="250" height="220" as="geometry" />
         </mxCell>
         <mxCell id="09Vv4NE0MWYsCeX41dwb-3" value="[{&#xa;    &quot;deviceName&quot;: &quot;stemp_test_1_zhan&quot;,&#xa;    &quot;deviceType&quot;: &quot;test&quot;,&#xa;    &quot;telemetry&quot;: [{&#xa;        &quot;temperature1&quot;: 9.0&#xa;    },&#xa;    {&#xa;        &quot;humidity4&quot;: 40.0&#xa;    }],&#xa;    &quot;attributes&quot;: [{&#xa;        &quot;temperature1&quot;: 9.0&#xa;    },&#xa;    {&#xa;        &quot;temperature2&quot;: 10.0&#xa;    },&#xa;    {&#xa;        &quot;temperature3&quot;: 11.0&#xa;    },&#xa;&#xa;&#xa;    {&#xa;        &quot;humidity4&quot;: 40.0&#xa;    }]&#xa;}]" style="text;whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="80" y="360" width="250" height="370" as="geometry" />
@@ -90,11 +90,11 @@
             <mxGeometry x="-450" y="1270" width="280" height="270" as="geometry" />
           </mxCell>
         </UserObject>
-        <mxCell id="09Vv4NE0MWYsCeX41dwb-10" value="&lt;span style=&quot;font-size: 15px;&quot;&gt;一个json；遥测和遥信分别是32个点位；其中30个是聚合成一个点位。采集频率是1s。那么会产生6条消息。如果消息大还会被分片。&lt;/span&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="-170" y="1290" width="260" height="120" as="geometry" />
+        <mxCell id="09Vv4NE0MWYsCeX41dwb-10" value="&lt;span style=&quot;font-size: 15px;&quot;&gt;一个json；遥测和遥信分别是32个点位；其中30个是聚合成一个点位。采集频率是1s。那么会产生6条消息。如果消息大还会被分片，这样也会影响产生的消息。&lt;br&gt;&lt;br&gt;如果不考虑分片；每次modbus connector会去发送3（设备）* 6 = 18次，modbus请求，然后会产生3（设备）*2次 mqtt请求分别是遥测和遥信。共6条消息消息。&lt;/span&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-170" y="1290" width="620" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="09Vv4NE0MWYsCeX41dwb-11" value="目前网关往edge 传数据，同样的数据，大概是0.26s。30个遥测和遥信的数据。" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="-150" y="1460" width="320" height="30" as="geometry" />
+        <mxCell id="09Vv4NE0MWYsCeX41dwb-11" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;目前网关往edge 传数据，同样的数据（一次遥信一次遥测），大概是0.26s。&lt;/font&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-170" y="1410" width="320" height="100" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
