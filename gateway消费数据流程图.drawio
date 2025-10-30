@@ -46,29 +46,32 @@
         <mxCell id="fdEUbVGZUb5s5dEQihQs-17" value="&lt;div style=&quot;background-color:#1e1f22;color:#bcbec4&quot;&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:9.8pt;&quot;&gt;&lt;span style=&quot;color:#56a8f5;&quot;&gt;send_to_storage&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="-80" y="200" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="LNKvwu89KQF0c-JhORbD-2" value="&lt;div style=&quot;background-color: rgb(30, 31, 34); color: rgb(188, 190, 196);&quot;&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:9.8pt;&quot;&gt;&lt;div&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:9.8pt;&quot;&gt;&lt;div&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:9.8pt;&quot;&gt;__sending_queue&lt;/pre&gt;&lt;/div&gt;Queue&lt;/pre&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="LNKvwu89KQF0c-JhORbD-2" value="&lt;div style=&quot;background-color: rgb(30, 31, 34); color: rgb(188, 190, 196);&quot;&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:9.8pt;&quot;&gt;&lt;div&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:9.8pt;&quot;&gt;&lt;div&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:9.8pt;&quot;&gt;__sending_queue&lt;/pre&gt;&lt;/div&gt;Queue&lt;/pre&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="940" y="150" width="200" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="LNKvwu89KQF0c-JhORbD-3" value="&lt;div style=&quot;background-color:#1e1f22;color:#bcbec4&quot;&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:9.8pt;&quot;&gt;TBDeviceMqttClient&lt;/pre&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+        <mxCell id="LNKvwu89KQF0c-JhORbD-3" value="&lt;div style=&quot;background-color:#1e1f22;color:#bcbec4&quot;&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:9.8pt;&quot;&gt;TBDeviceMqttClient&lt;/pre&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="970" y="110" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="LNKvwu89KQF0c-JhORbD-4" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;rotation=90;" vertex="1" parent="1">
+        <mxCell id="LNKvwu89KQF0c-JhORbD-4" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;rotation=90;" parent="1" vertex="1">
           <mxGeometry x="1390" y="165" width="60" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="LNKvwu89KQF0c-JhORbD-7" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+        <mxCell id="LNKvwu89KQF0c-JhORbD-7" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
           <mxGeometry x="1241" y="290" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="LNKvwu89KQF0c-JhORbD-8" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+        <mxCell id="LNKvwu89KQF0c-JhORbD-8" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="1180" y="200" as="sourcePoint" />
             <mxPoint x="1360" y="200" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="LNKvwu89KQF0c-JhORbD-9" value="&lt;div style=&quot;background-color: rgb(30, 31, 34); color: rgb(188, 190, 196);&quot;&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:9.8pt;&quot;&gt;TBDeviceMqttClient&lt;/pre&gt;&lt;/div&gt;&lt;div&gt;里面有个线程去将__sending queue 数据通过python的paho lib库，将数据发送出去。&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+        <mxCell id="LNKvwu89KQF0c-JhORbD-9" value="&lt;div style=&quot;background-color: rgb(30, 31, 34); color: rgb(188, 190, 196);&quot;&gt;&lt;pre style=&quot;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:9.8pt;&quot;&gt;TBDeviceMqttClient&lt;/pre&gt;&lt;/div&gt;&lt;div&gt;里面有个线程去将__sending queue 数据通过python的paho lib库，将数据发送出去。&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="1350" y="270" width="150" height="95" as="geometry" />
         </mxCell>
-        <mxCell id="LNKvwu89KQF0c-JhORbD-12" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;性能不够&lt;/h1&gt;&lt;div&gt;1、event_storage 数据堆积很多。&lt;/div&gt;&lt;p&gt;2、发现__sending_queue 其实没啥数据。说明__send_thread。性能不够&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+        <mxCell id="LNKvwu89KQF0c-JhORbD-12" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;性能不够&lt;/h1&gt;&lt;div&gt;1、event_storage 数据堆积很多。&lt;/div&gt;&lt;p&gt;2、发现__sending_queue 其实没啥数据。说明__send_thread。性能不够&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="770" y="420" width="250" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="09Vv4NE0MWYsCeX41dwb-3" value="[{&#xa;    &quot;deviceName&quot;: &quot;stemp_test_1_zhan&quot;,&#xa;    &quot;deviceType&quot;: &quot;test&quot;,&#xa;    &quot;telemetry&quot;: [{&#xa;        &quot;temperature1&quot;: 9.0&#xa;    },&#xa;    {&#xa;        &quot;humidity4&quot;: 40.0&#xa;    }],&#xa;    &quot;attributes&quot;: [{&#xa;        &quot;temperature1&quot;: 9.0&#xa;    },&#xa;    {&#xa;        &quot;temperature2&quot;: 10.0&#xa;    },&#xa;    {&#xa;        &quot;temperature3&quot;: 11.0&#xa;    },&#xa;&#xa;&#xa;    {&#xa;        &quot;humidity4&quot;: 40.0&#xa;    }]&#xa;}]" style="text;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="90" y="290" width="250" height="370" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
