@@ -63,6 +63,36 @@
         <mxCell id="dSdK4LhfDu9CYQwUeWur-20" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="publish" vertex="1">
           <mxGeometry height="30" width="60" x="-230" y="320" as="geometry" />
         </mxCell>
+        <mxCell id="Lm_W7M51IuSAjGSyumBX-1" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="" vertex="1">
+          <mxGeometry height="140" width="60" x="160" y="1084" as="geometry" />
+        </mxCell>
+        <mxCell id="Lm_W7M51IuSAjGSyumBX-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="待发送队列" vertex="1">
+          <mxGeometry height="30" width="60" x="230" y="1139" as="geometry" />
+        </mxCell>
+        <mxCell id="Lm_W7M51IuSAjGSyumBX-4" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Actor" vertex="1">
+          <mxGeometry height="60" width="30" x="60" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="Lm_W7M51IuSAjGSyumBX-5" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Actor" vertex="1">
+          <mxGeometry height="60" width="30" x="320" y="830" as="geometry" />
+        </mxCell>
+        <mxCell id="Lm_W7M51IuSAjGSyumBX-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="遥测Thread" vertex="1">
+          <mxGeometry height="30" width="60" x="90" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="Lm_W7M51IuSAjGSyumBX-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Rpc reply Thread" vertex="1">
+          <mxGeometry height="30" width="60" x="360" y="855" as="geometry" />
+        </mxCell>
+        <mxCell id="Lm_W7M51IuSAjGSyumBX-8" edge="1" parent="1" source="Lm_W7M51IuSAjGSyumBX-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="Lm_W7M51IuSAjGSyumBX-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Lm_W7M51IuSAjGSyumBX-9" edge="1" parent="1" source="Lm_W7M51IuSAjGSyumBX-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.855;entryY=0;entryDx=0;entryDy=4.35;entryPerimeter=0;" target="Lm_W7M51IuSAjGSyumBX-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Lm_W7M51IuSAjGSyumBX-11" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;遥测线程逻辑&lt;/h1&gt;&lt;div&gt;1、轮询拿100条数据。&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;2、check_size，如果超过发送最小报文包，即可发送。&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;3、while true 等待rpc 回复消息&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;4、这批次消息处理结束。&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="180" x="-160" y="940" as="geometry" />
+        </mxCell>
+        <mxCell id="Lm_W7M51IuSAjGSyumBX-14" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Rpc Reply 线程逻辑&lt;/h1&gt;&lt;div&gt;1、设置rpc send 标记位。&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;2、发送publish 回复消息。&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;3、清空标记位。&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="280" x="360" y="940" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
